@@ -5,18 +5,21 @@ commands:
     description: Destroy back-end and front-end cloudformation stacks given a workflow ID.
     parameters:
       # Add parameter here   
+      workflow_id:
+        type: string
     steps:
       - run:
           name: Destroy environments
           when: on_fail
           command: |
-            # Your code here
-            exit 1
+            echo "Destroying environment: << parameters.workflow_id >> "
 
   revert-migrations:
     description: Revert the last migration if successfully run in the current workflow.
     parameters:
-      # Add parameter here     
+      # Add parameter here 
+       workflow_id:
+        type: string
     steps:
       - run:
           name: Revert migrations
@@ -26,10 +29,10 @@ commands:
             SUCCESS = 1
             if(( $SUCCESS==1 )); 
             then
-            #  cd ~/project/backend
-            #  npm install
+              cd ~/project/backend
+              npm install
             #  Add revert code here. You can find this in the Getting Started section.
-              exit 1
+              npm run migration:revert
             fi
             
 jobs:
