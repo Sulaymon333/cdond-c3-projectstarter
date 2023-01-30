@@ -1,2 +1,3 @@
 [URL01] https://github.com/Sulaymon333/cdond-c3-projectstarter
-[URL02] http://udapeople-3ad4b05.s3-website-us-east-1.amazonaws.com/#/employees
+[URL02] http://udapeople-36dfeb2.s3-website-us-east-1.amazonaws.com/#/employees
+[CLOUDFRONT URL] http://dmq16tqg955lo.cloudfront.net/?#/employees
